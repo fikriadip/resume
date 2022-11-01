@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@screen print {
+  @page {
+    margin: 0;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    color: #3c3f4c !important;
+  }
+
+  .page {
+    padding: theme(spacing.16) theme(spacing.16) !important;
+    height: 100vh !important;
+  }
+
+  .initial {
+    color: transparent !important;
+    text-shadow: 0 0 0 #fff !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  li {
+    color: #3c3f4c !important;
+  }
+
+  html {
+    font-size: 11px !important;
+  }
+}
+
+html {
+  font-size: 11px;
+  background-color: #f4f4f7;
+  background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 15l15 15H0V15zM15 0l15 15V0H15z' fill='%23000000' fill-opacity='0.7' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+@screen sm {
+  html {
+    font-size: calc(11px + (16 - 11) * (100vw - 640px) / (833 - 640));
+  }
+}
+
+@screen md {
+  html {
+    font-size: calc(11px + (16 - 11) * (100vw - 833px) / (1079.5 - 833));
+  }
+}
+
+@screen lg {
+  html {
+    font-size: 11px;
+  }
+}
+
+body .icon-parent::before {
+  content: "A";
+  width: 0;
+  visibility: hidden;
+  display: inline-block;
+}
+
+i:hover {
+  color: #3c3f4c !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
